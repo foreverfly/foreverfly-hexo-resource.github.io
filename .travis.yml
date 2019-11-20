@@ -16,6 +16,7 @@ cache:
 before_install:
   - npm install -g hexo-cli
   - git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
+  - npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 # °²×°ÒÀÀµ
 install:
