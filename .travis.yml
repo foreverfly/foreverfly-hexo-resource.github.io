@@ -15,7 +15,9 @@ cache:
 # 构建之前安装hexo-cli，因为接下来会用到
 before_install:
   - npm install -g hexo-cli
-  - npm install hexo-renderer-pug hexo-renderer-stylus --save
+  - npm install hexo-renderer-less --save
+  - npm install hexo-generator-feed --save
+  - npm install hexo-generator-json-content --save
 
 # 安装依赖
 install:
