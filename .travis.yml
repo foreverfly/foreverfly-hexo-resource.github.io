@@ -15,7 +15,7 @@ cache:
 # 构建之前安装hexo-cli，因为接下来会用到
 before_install:
   - npm install -g hexo-cli
-  - git clone https://github.com/shixiaohu2206/hexo-theme-huhu.git themes/huhu
+  - git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly
 
 # 安装依赖
 install:
