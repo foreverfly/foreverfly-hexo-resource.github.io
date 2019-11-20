@@ -15,9 +15,7 @@ cache:
 # 构建之前安装hexo-cli，因为接下来会用到
 before_install:
   - npm install -g hexo-cli
-  - npm install hexo-renderer-less --save
-  - npm install hexo-generator-feed --save
-  - npm install hexo-generator-json-content --save
+  - git clone https://github.com/shixiaohu2206/hexo-theme-huhu.git themes/huhu
 
 # 安装依赖
 install:
@@ -35,4 +33,6 @@ after_success:
   - git config --global user.email "496754093@qq.com"
   # 替换同目录下的_config.yml文件中GH_TOKEN字符串为travis后台配置的变量
   - sed -i "s/GH_TOKEN/${GH_TOKEN}/g" ./_config.yml
+  # 替换同目录下的_config.yml文件中GH_THEME字符串为travis后台配置的变量
+  - sed -i "s/GH_THEME/${GH_THEME}/g" ./_config.yml
   - hexo deploy
